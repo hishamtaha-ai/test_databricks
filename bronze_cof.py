@@ -1,16 +1,18 @@
 base_path="/Volumes/workspace/bronze/source_system"
 config_erp=[{
     "source":"erp",
-    "path":f"{base_path}/Volumes/workspace/bronze/source_system/source_erp/CUST_AZ12.csv",
+    "path":f"{base_path}/source_erp/CUST_AZ12.csv",
     "table":"erp_CUST_AZ12"
 },
 {
     "source":"erp",
-    "path":f"{base_path}/Volumes/workspace/bronze/source_system/source_erp/LOC_A101.csv",
+    "path":f"{base_path}/source_erp/LOC_A101.csv",
     "table":"erp_LOC_A101"}
 ,
 {
     "source":"erp",
-    "path":f"{base_path}/Volumes/workspace/bronze/source_system/source_erp/LOC_A101.csv",
+    "path":f"{base_path}/source_erp/LOC_A101.csv",
     "table":"erp_LOC_A101"}
 ]
+for item in config_erp:
+    df=spark.read.option("header","true").option("inferSchema","true").csv(item["path"])
