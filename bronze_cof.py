@@ -1,0 +1,16 @@
+base_path="/Volumes/workspace/bronze/source_system"
+config_erp=[{
+    "source":"erp",
+    "path":f"{base_path}/Volumes/workspace/bronze/source_system/source_erp/CUST_AZ12.csv",
+    "table":"erp_CUST_AZ12"
+},
+{
+    "source":"erp",
+    "path":f"{base_path}/Volumes/workspace/bronze/source_system/source_erp/LOC_A101.csv",
+    "table":"erp_LOC_A101"}
+,
+{
+    "source":"erp",
+    "path":f"{base_path}/Volumes/workspace/bronze/source_system/source_erp/LOC_A101.csv",
+    "table":"erp_LOC_A101"}
+]
