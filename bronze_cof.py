@@ -16,3 +16,4 @@ config_erp=[{
 ]
 for item in config_erp:
     df=spark.read.option("header","true").option("inferSchema","true").csv(item["path"])
+    df=spark.write.mode("overwrite").format("delta").saveastable(f"bronze.{item["table"]}")
